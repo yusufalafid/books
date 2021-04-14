@@ -28,7 +28,6 @@ pipeline {
                 echo '### Installing NPM dependencies ###'
                 sh '''
                         npm config set registry ${NEXUS_SERVER}
-                        cd books
                         npm install
                    '''
             }
@@ -37,14 +36,14 @@ pipeline {
         stage('Run Unit Tests') {
             steps {
                 echo '### Running unit tests ###'
-                sh 'cd books; npm test'
+                sh 'npm test'
             }
         }
 
         stage('Run Linting Tools') {
             steps {
                 echo '### Running eslint on code ###'
-                sh 'cd books; npm run lint'
+                sh 'npm run lint'
             }
         }
 
