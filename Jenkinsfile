@@ -40,13 +40,6 @@ pipeline {
             }
         }
 
-        stage('Run Linting Tools') {
-            steps {
-                echo '### Running eslint on code ###'
-                sh 'npm run lint'
-            }
-        }
-
         stage('Launch new app in DEV env') {
             steps {
                 echo '### Cleaning existing resources in DEV env ###'
