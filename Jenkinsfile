@@ -52,7 +52,7 @@ pipeline {
                 echo '### Creating a new app in DEV env ###'
                 sh '''
                         oc project ${DEV_PROJECT}
-                        oc new-app --name books image-registry.openshift-image-registry.svc:5000/ci-cd/nearform-s2i-nodejs8~${APP_GIT_URL} \
+                        oc new-app --name books nearform/nearform-s2i-nodejs8~${APP_GIT_URL} \
                         --build-env npm_config_registry=${NEXUS_SERVER} \
                         --context-dir ${APP_NAME}
 
