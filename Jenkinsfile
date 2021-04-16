@@ -14,7 +14,7 @@ pipeline {
         DEV_PROJECT = "ucup-dev"
         STAGE_PROJECT = "ucup-stage"
         APP_GIT_URL = "https://github.com/yusufalafid/books"
-        NEXUS_SERVER = "http://192.168.10.26:8081/repository/npm/"
+        NEXUS_SERVER = "http://192.168.10.26:8081/repository/npm-group/"
 
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "books"
