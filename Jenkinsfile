@@ -54,7 +54,7 @@ pipeline {
                         oc project ${DEV_PROJECT}
                         oc new-app --name books nearform/nearform-s2i-nodejs8~${APP_GIT_URL} \
                         --build-env npm_config_registry=${NEXUS_SERVER} \
-                        --context-dir ${APP_NAME}
+                        --context-dir ${APP_NAME} --allow-missing-images
 
                         oc expose svc/${APP_NAME}
                    '''
