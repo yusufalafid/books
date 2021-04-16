@@ -52,7 +52,7 @@ pipeline {
                 echo '### Creating a new app in DEV env ###'
                 sh '''
                         oc project ${DEV_PROJECT}
-                        oc new-app --name books nodejs:8~{APP_GIT_URL} \
+                        oc new-app --name books node:8~{APP_GIT_URL} \
                         --build-env npm_config_registry=${NEXUS_SERVER} \
                         --context-dir ${APP_NAME}
 
