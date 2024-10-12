@@ -8,9 +8,9 @@
     "lint": "node_modules/.bin/eslint . --ext .js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "~1.4.7",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "~4.21.1",
     "express-prettify": "^0.1.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
